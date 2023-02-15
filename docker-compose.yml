@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongoseeder_mongodb
+    environment:
+      - MONGODB_DATABASE="bulk_example"
+    ports:
+      - 27017:27017
+    volumes:
+      - ./dumps:/dumps
